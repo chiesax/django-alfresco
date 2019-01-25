@@ -103,7 +103,7 @@ class AlfrescoUser(User):
             # TODO: If user is not default direct them to login page
             #   get ticket and return it.
             return None
-        from alfresco.service import login
+        from djalf.alfresco.service import login
         ticket = login(settings.ALFRESCO_DEFAULT_USER, settings.ALFRESCO_DEFAULT_USER_PASSWORD)
         self.ticket = ticket
         self.save()
